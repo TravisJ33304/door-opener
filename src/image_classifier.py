@@ -5,20 +5,15 @@ if the image is classified as an authorized person
 then it will open the door
 """
 
-import os
 import time
 import numpy as np
-import tensorflow as tf
 from picamera import PiCamera
 from picamera.array import PiRGBArray
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.mobilenet_v2 import decode_predictions
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
 from tensorflow.keras.models import load_model
-from tensorflow.keras.models import Model
 
 
 class ImageClassifier:
