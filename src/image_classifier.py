@@ -9,11 +9,8 @@ import time
 import numpy as np
 from picamera import PiCamera
 from picamera.array import PiRGBArray
-from keras.applications import imagenet_utils
-from keras.applications import MobileNet
 from keras.preprocessing import image
 from keras.preprocessing.image import img_to_array
-from keras.preprocessing.image import load_img
 from keras.applications.mobilenet import preprocess_input
 from keras.applications.mobilenet import decode_predictions
 from keras.models import load_model
