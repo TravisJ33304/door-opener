@@ -9,11 +9,14 @@ import time
 import numpy as np
 from picamera import PiCamera
 from picamera.array import PiRGBArray
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.applications.mobilenet_v2 import decode_predictions
-from tensorflow.keras.models import load_model
+from keras.applications import imagenet_utils
+from keras.applications import MobileNet
+from keras.preprocessing import image
+from keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import load_img
+from keras.applications.mobilenet import preprocess_input
+from keras.applications.mobilenet import decode_predictions
+from keras.models import load_model
 
 
 class ImageClassifier:
