@@ -47,9 +47,8 @@ class ImageClassifier:
             print(prediction)
             prediction = np.argmax(prediction, axis=1)
             if prediction[0] == 1:
-                print("Authorized")
-                # self.door_opener.open_door()
-                # self.door_opener.close_door()
-            else:
-                print("Unauthorized")
+                print("Authorized user detected, opening door")
+                self.door_opener.open_door()
+                self.door_opener.close_door()
+                print("Door closed")
             rawCapture.truncate(0)
